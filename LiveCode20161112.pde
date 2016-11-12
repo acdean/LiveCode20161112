@@ -27,13 +27,19 @@ void rand() {
 
 void draw() {
   background(0);
+  rx += dx;
+  ry += dy;
+  rz += dz;
+  rotateX(rx);
+  rotateY(ry);
+  rotateZ(rz);
   for (Binary b : list) {
     b.draw();
   }
 }
 
 class Binary {
-  String s;
+  String s = "";
   float x, y, z;
   float rx, ry, rz;
   color c;
