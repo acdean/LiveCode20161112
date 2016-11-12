@@ -7,6 +7,7 @@ float SZ = 250;
 int COUNT = 100;
 ArrayList<Binary> list = new ArrayList<Binary>();
 PFont f;
+boolean video;
 
 void setup() {
   size(640, 360, P3D);
@@ -38,6 +39,13 @@ void draw() {
   rotateZ(rz);
   for (Binary b : list) {
     b.draw();
+  }
+  
+  if (video) {
+    saveFrame("frame#####.png");
+    if (frameCount > 500) {
+      exit();
+    }
   }
 }
 
@@ -83,5 +91,8 @@ class Binary {
 void keyPressed() {
   if (key == 's') {
     saveFrame("snapshot####.png");
+  }
+  if (key == 'r') {
+    rand();
   }
 }
