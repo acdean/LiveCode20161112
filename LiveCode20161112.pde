@@ -1,4 +1,4 @@
-import PeasyCam.*;
+import peasy.*;
 
 PeasyCam cam;
 float rx, ry, rz;
@@ -8,7 +8,7 @@ int COUNT = 50;
 ArrayList<Binary> list = new ArrayList<Binary>();
 
 void setup() {
-  size(640, 360);
+  size(640, 360, P3D);
   cam = new PeasyCam(this, 500);
   rand();
   for (int i = 0 ; i < COUNT ; i++) {
@@ -26,6 +26,10 @@ void rand() {
 }
 
 void draw() {
+  background(0);
+  for (Binary b : list) {
+    b.draw();
+  }
 }
 
 class Binary {
