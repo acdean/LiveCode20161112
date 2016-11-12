@@ -1,4 +1,4 @@
-import peasyCam.*;
+import PeasyCam.*;
 
 PeasyCam cam;
 float rx, ry, rz;
@@ -28,7 +28,7 @@ void rand() {
 void draw() {
 }
 
-void Binary() {
+class Binary {
   String s;
   float x, y, z;
   float rx, ry, rz;
